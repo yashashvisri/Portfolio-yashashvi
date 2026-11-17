@@ -401,6 +401,31 @@ function renderPatentAndResearch() {
   main.appendChild(prSection);
 }
 
+function renderProjects() {
+  const main = document.getElementById('main-content');
+  if (!main) return;
+
+  const projectsSection = document.createElement('section');
+  projectsSection.id = 'projects';
+  projectsSection.className = 'section';
+  projectsSection.innerHTML = `
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">Engineering Portfolio</span>
+        <h2 class="section-title">Featured Projects & Systems</h2>
+        <p class="section-subtitle">Real-world full-stack architectures, LLM prompt engineering, and cloud services.</p>
+      </div>
+
+      <div id="projects-container">
+        <!-- Rendered by js/projects.js -->
+      </div>
+    </div>
+  `;
+
+  main.appendChild(projectsSection);
+  initProjectsSection();
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
