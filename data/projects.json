@@ -1,0 +1,78 @@
+[
+  {
+    "id": "pureup",
+    "title": "PureUP: AQI Based Air Quality Improver",
+    "category": "fullstack",
+    "categoryLabel": "Full-Stack & Cloud API",
+    "badge": "Production Cloud Deployed",
+    "shortDescription": "FastAPI-based API and e-Commerce platform recommending optimal indoor plants using voting-based ML models.",
+    "fullDescription": "PureUP is an environmental health intelligence platform. It processes environmental metrics (PM2.5, PM10, humidity, temperature) to recommend specific air-purifying plants tailored to individual rooms and climates using an ensemble voting model.",
+    "tags": ["FastAPI", "Python", "Machine Learning", "JavaScript", "HTML5", "Render", "REST API"],
+    "metrics": [
+      { "label": "Model Accuracy", "value": "90%" },
+      { "label": "Daily API Requests", "value": "300+" },
+      { "label": "Cloud Uptime", "value": "99%" },
+      { "label": "Decision Efficiency", "value": "+45%" }
+    ],
+    "highlights": [
+      "Engineered a multi-classifier voting model achieving 90% prediction accuracy over 500+ diverse environmental inputs.",
+      "Built resilient RESTful API endpoints in FastAPI with automated Pydantic schema validation.",
+      "Successfully deployed on Render cloud infrastructure, maintaining 99% uptime under active daily usage.",
+      "Integrated front-end eCommerce catalog enabling users to immediately purchase recommended plant species."
+    ],
+    "links": {
+      "github": "https://github.com/yashashvisri/pureup-aqi-recommender",
+      "demo": "https://pureup-demo.onrender.com"
+    }
+  },
+  {
+    "id": "aura-health",
+    "title": "Aura: Health Habit Tracker",
+    "category": "genai",
+    "categoryLabel": "Generative AI & HealthTech",
+    "badge": "Gemini API Integrated",
+    "shortDescription": "Full-stack preventative health habit tracking platform with Google Firestore and LLM-driven personalized coaching.",
+    "fullDescription": "Aura helps users build long-term wellness routines by monitoring key lifestyle signals and delivering dynamically generated workout regimes, nutritional plans, and real-time encouragement through the Google Gemini LLM.",
+    "tags": ["Python", "Flask", "Firebase Firestore", "Gemini API", "Tailwind CSS", "Health Informatics"],
+    "metrics": [
+      { "label": "Tracked Biomarkers", "value": "4+ Metrics" },
+      { "label": "LLM Feeds", "value": "3 Streams" },
+      { "label": "Data Latency", "value": "Real-time" }
+    ],
+    "highlights": [
+      "Designed full-stack application with Python and Flask integrated with Google Cloud Firestore for real-time state synchronization.",
+      "Tracked and analyzed 4+ key daily health dimensions: sleep duration, physical activity, calorie balance, and mood states.",
+      "Leveraged Google Gemini API to dynamically generate 3 bespoke content streams: customized exercise plans, meal recipes, and motivational reinforcement.",
+      "Implemented responsive data visualization charts displaying weekly habit consistency and trend analysis."
+    ],
+    "links": {
+      "github": "https://github.com/yashashvisri/aura-health-tracker",
+      "demo": "https://aura-health.app"
+    }
+  },
+  {
+    "id": "study-buddy",
+    "title": "AI-Powered Study Buddy",
+    "category": "genai",
+    "categoryLabel": "EdTech & Generative AI",
+    "badge": "Gemini 3-Day Mastery",
+    "shortDescription": "Autonomous AI learning assistant architecting structured 3-day syllabi, scheduled alerts, and adaptive content.",
+    "fullDescription": "An interactive learning acceleration tool built with Streamlit. Given any complex subject, the agent deconstructs the topic into an actionable 3-day mastery milestone, generates in-depth study notes, and automates reminder emails.",
+    "tags": ["Python", "Streamlit", "Gemini API", "SMTPlib", "NLP", "Prompt Engineering"],
+    "metrics": [
+      { "label": "Core Features", "value": "3 Modules" },
+      { "label": "Plan Duration", "value": "3-Day Mastery" },
+      { "label": "Content Modes", "value": "2 Adaptive" }
+    ],
+    "highlights": [
+      "Architected 3 core automated features: comprehensive study guide synthesis, micro-schedule generation, and automated email progress triggers.",
+      "Engineered structured prompt chains with Google Gemini API to formulate rigorous 3-day roadmaps for complex STEM topics.",
+      "Built an intuitive and responsive Streamlit interface providing 2 distinct content presentation modes (conceptual vs quiz-driven).",
+      "Automated reminder dispatch using Python SMTPlib to keep students accountable throughout their learning sprint."
+    ],
+    "links": {
+      "github": "https://github.com/yashashvisri/ai-study-buddy",
+      "demo": "https://study-buddy.streamlit.app"
+    }
+  }
+]
