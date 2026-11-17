@@ -1,0 +1,115 @@
+{
+  "basics": {
+    "name": "Yashashvi Srivastava",
+    "label": "AI/ML Engineer & Full-Stack Developer",
+    "email": "yashashvisrivastava674@gmail.com",
+    "phone": "+91 8303355281",
+    "linkedin": "https://www.linkedin.com/in/yashashvi-srivastava-681b35251",
+    "github": "https://github.com/yashashvisri",
+    "summary": "Specialized in Artificial Intelligence and Machine Learning with hands-on experience in Generative AI, LLM training, deep learning architectures, and scalable web application development. Published researcher and granted patent holder with proven leadership in R&D.",
+    "location": {
+      "country": "India",
+      "availability": "Open to Full-Time, Remote & Hybrid Roles"
+    }
+  },
+  "education": [
+    {
+      "institution": "VIT Bhopal University",
+      "degree": "B.Tech in Computer Science and Engineering",
+      "specialization": "Artificial Intelligence and Machine Learning",
+      "startDate": "August 2022",
+      "endDate": "July 2026",
+      "score": "CGPA: 8.67 / 10",
+      "honors": "Ranked in the top 10% of the class for consistent academic excellence"
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "Java", "SQL", "JavaScript", "HTML5", "CSS3"],
+    "ai_ml": [
+      "Machine Learning (scikit-learn)",
+      "Deep Learning (TensorFlow, Keras)",
+      "Computer Vision",
+      "Data Science",
+      "Generative AI & LLMs",
+      "Gemini API",
+      "DenseNet & ResNet Architectures"
+    ],
+    "web_frameworks": [
+      "FastAPI",
+      "Flask",
+      "Streamlit",
+      "RESTful APIs",
+      "Firebase Firestore"
+    ],
+    "tools_hardware": [
+      "Raspberry Pi 4",
+      "IoT Systems",
+      "Git & GitHub",
+      "Docker",
+      "Render Cloud",
+      "SMTPlib"
+    ]
+  },
+  "experience": [
+    {
+      "role": "AI Intern",
+      "company": "NexaWorks",
+      "location": "Mumbai, Maharashtra",
+      "period": "August 2025",
+      "highlights": [
+        "Developed and trained LLMs to process legal judgments, significantly accelerating legal research and case preparation.",
+        "Engineered a proprietary dataset for model training, ensuring superior performance in identifying and extracting key legal information.",
+        "Executed research to optimize model performance, directly improving the platform's accuracy and strategic utility for lawyers."
+      ]
+    },
+    {
+      "role": "Live Project Trainee",
+      "company": "MPCST Lab, VIT Bhopal University",
+      "location": "Bhopal, MP",
+      "period": "July 2023 – August 2024",
+      "highlights": [
+        "Achieved 92% accuracy in crop disease detection by developing a DenseNetV2 model for an IoT-based monitoring system.",
+        "Deployed the deep learning model on a Raspberry Pi 4, enabling real-time, video-based crop health analysis.",
+        "Awarded: Granted patent for 'Automated Spraying System', revolutionizing pesticide application with 20% efficiency gain in automation."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "PureUP: AQI Based Air Quality Improver",
+      "tags": ["FastAPI", "Python", "AI", "JavaScript", "HTML"],
+      "description": "Developed a FastAPI-based API and e-Commerce platform for plant recommendations using a voting-based AI model, achieving 90% accuracy for 500+ user inputs based on environmental data.",
+      "metrics": "Handled 300+ daily requests on Render cloud with 99% uptime; enhanced indoor air quality decision-making efficiency by 45%."
+    },
+    {
+      "title": "Aura: Health Habit Tracker",
+      "tags": ["Python", "Flask", "Firebase", "Gemini API"],
+      "description": "Full-stack preventative health application tracking 4+ key metrics (sleep, activity, calories, mood) in real-time with Google Firestore.",
+      "metrics": "Integrated Google Gemini API to generate 3 unique types of personalized content: customized workout routines, meal plans, and adaptive motivational messaging."
+    },
+    {
+      "title": "AI-Powered Study Buddy",
+      "tags": ["Python", "Streamlit", "Gemini API", "SMTPlib"],
+      "description": "Architected an AI learning assistant with 3 core features (study guide generation, schedule automation, and email alerts) utilizing the Gemini API for 3-day mastery plans.",
+      "metrics": "Responsive Streamlit web app with 2 distinct content delivery modes adapting to real-time learner feedback."
+    }
+  ],
+  "achievements": [
+    {
+      "type": "Patent",
+      "title": "Automated Spraying System",
+      "description": "Granted patent for an innovative agricultural automation system providing 20% efficiency gain in precision pesticide application."
+    },
+    {
+      "type": "Publication",
+      "title": "Towards Automated Crop Protection: Fusion of DenseNet121-ResNet50 model for Disease Detection and Pest Recognition",
+      "mentors": "Under guidance of Dr. Anil Kumar Yadav and Mr. Shiv Shankar Prasad Shukla",
+      "citations": "3+ citations"
+    },
+    {
+      "type": "Leadership",
+      "title": "R&D Team Lead & Technical Speaker",
+      "description": "Managed a 10+ member R&D team and conducted technical workshops on IoT and ML integration."
+    }
+  ]
+}
