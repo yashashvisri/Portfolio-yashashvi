@@ -426,6 +426,49 @@ function renderProjects() {
   initProjectsSection();
 }
 
+function renderTerminalSection() {
+  const main = document.getElementById('main-content');
+  if (!main) return;
+
+  const termSection = document.createElement('section');
+  termSection.id = 'terminal';
+  termSection.className = 'section';
+  termSection.innerHTML = `
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">Interactive Console</span>
+        <h2 class="section-title">Developer Terminal</h2>
+        <p class="section-subtitle">Prefer the command line? Query Yashashvi's portfolio credentials and systems directly.</p>
+      </div>
+
+      <div class="terminal-box" id="terminal-box">
+        <div class="terminal-header-bar">
+          <div class="terminal-dots">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+          </div>
+          <div class="terminal-tab-title">
+            <span>bash &bull; yashashvi@portfolio: ~</span>
+          </div>
+          <div style="font-size: 0.75rem; color: #64748b;">CLI v1.0</div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <div id="terminal-output-container"></div>
+          <div class="terminal-input-row">
+            <span class="terminal-prompt">guest@yashashvi:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type 'help' and press Enter..." aria-label="Terminal command input">
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  main.appendChild(termSection);
+  initTerminal();
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
