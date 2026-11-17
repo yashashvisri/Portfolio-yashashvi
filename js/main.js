@@ -363,7 +363,37 @@ function renderPatentAndResearch() {
       </div>
 
       <div id="research-publication-container">
-        <!-- Research publication card injected in next commit -->
+        <!-- Published Research Paper Card -->
+        <div class="research-card">
+          <div class="research-header">
+            <span class="publication-badge">
+              <span>📚</span> Peer-Reviewed Publication
+            </span>
+            <span class="citation-counter">
+              <span>🌟</span> 3+ Citations
+            </span>
+          </div>
+
+          <h3 class="research-title">
+            Towards Automated Crop Protection: Fusion of DenseNet121-ResNet50 model for Disease Detection and Pest Recognition
+          </h3>
+
+          <div class="research-mentors">
+            <strong>Advisory / Mentorship:</strong> Under the guidance of Dr. Anil Kumar Yadav and Mr. Shiv Shankar Prasad Shukla
+          </div>
+
+          <p class="research-abstract">
+            This study proposes a high-performing hybrid convolutional neural network fusion architecture. By combining DenseNet121’s tight feature reuse with ResNet50’s residual gradient flow, the pipeline achieves robust multi-class plant leaf disease classification and pest identification even under severe field conditions, occlusions, and dynamic illumination.
+          </p>
+
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="skill-pill">DenseNet121</span>
+            <span class="skill-pill">ResNet50</span>
+            <span class="skill-pill">Ensemble Deep Learning</span>
+            <span class="skill-pill">Computer Vision</span>
+            <span class="skill-pill">IoT Edge Compute</span>
+          </div>
+        </div>
       </div>
     </div>
   `;
