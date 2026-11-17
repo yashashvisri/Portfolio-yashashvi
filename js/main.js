@@ -137,6 +137,72 @@ function renderHighlights() {
   `;
 }
 
+function renderAbout() {
+  const main = document.getElementById('main-content');
+  if (!main || !portfolioData) return;
+
+  const { basics, education } = portfolioData;
+  const edu = education[0];
+
+  const aboutSection = document.createElement('section');
+  aboutSection.id = 'about';
+  aboutSection.className = 'section';
+  aboutSection.innerHTML = `
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">Background & Education</span>
+        <h2 class="section-title">Engineering Intelligence, Designing Impact</h2>
+        <p class="section-subtitle">A blend of academic rigor, applied AI research, and end-to-end full stack development.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3 class="text-xl font-bold" style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">About Me</h3>
+          <div class="about-bio-text">
+            <p>
+              I am an AI/ML Engineer and undergraduate in Computer Science with a specialization in Artificial Intelligence & Machine Learning at <strong>VIT Bhopal University</strong>.
+            </p>
+            <p>
+              My expertise spans the entire machine learning lifecycle—from curating proprietary datasets and fine-tuning Large Language Models for domain-specific tasks to architecting real-time computer vision models on edge IoT devices (Raspberry Pi 4) and building responsive, resilient web applications with FastAPI, Flask, and React.
+            </p>
+            <p>
+              As a published researcher and patent recipient in automated precision agriculture, I thrive at the intersection of deep theoretical research and production-grade software engineering.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">Academic Foundation</h3>
+          <div class="edu-timeline-card">
+            <div class="edu-title">${edu.degree}</div>
+            <div class="edu-institution">${edu.institution}</div>
+            <div class="edu-meta">
+              <span>📅 ${edu.startDate} – ${edu.endDate}</span>
+              <span>📍 Bhopal, India</span>
+            </div>
+            <div style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="edu-badge">⭐ ${edu.score}</span>
+              <span class="edu-badge">🏆 Top 10% of Class</span>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">
+              Specialized coursework in Deep Learning, Computer Vision, Artificial Intelligence, Natural Language Processing, and Distributed Systems.
+            </p>
+          </div>
+
+          <div style="padding: 1.25rem; background: var(--bg-accent); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.35rem;">🤝 Leadership & Mentorship</div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+              Led an R&D team of 10+ members and conducted technical workshops on IoT and ML integration, fostering collaborative learning and innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  main.appendChild(aboutSection);
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
