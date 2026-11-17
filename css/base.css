@@ -112,3 +112,44 @@ img, svg {
   z-index: 9999;
   transition: width 0.1s ease-out;
 }
+
+
+/* ==========================================================================
+   Print Optimization Stylesheet
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .scroll-progress-bar,
+  .scroll-to-top-btn,
+  .theme-toggle-btn,
+  .terminal-box,
+  .contact-form-box,
+  .site-footer,
+  .hero-cta-group,
+  .projects-filter-bar {
+    display: none !important;
+  }
+
+  .section {
+    padding: 1.5rem 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .card, .about-card, .timeline-card, .spotlight-card, .research-card, .project-bento-card {
+    border: 1px solid #cccccc !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+
+  a {
+    text-decoration: underline !important;
+    color: #000000 !important;
+  }
+}
