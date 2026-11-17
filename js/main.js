@@ -203,6 +203,74 @@ function renderAbout() {
   main.appendChild(aboutSection);
 }
 
+function renderSkills() {
+  const main = document.getElementById('main-content');
+  if (!main || !portfolioData) return;
+
+  const { skills } = portfolioData;
+
+  const skillsSection = document.createElement('section');
+  skillsSection.id = 'skills';
+  skillsSection.className = 'section';
+  skillsSection.innerHTML = `
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">Technical Repertoire</span>
+        <h2 class="section-title">Skills & Tooling Matrix</h2>
+        <p class="section-subtitle">A battle-tested stack for machine learning, deep learning research, and modern web application engineering.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1: AI & ML -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🧠</div>
+            <div class="skill-cat-title">AI & Deep Learning</div>
+          </div>
+          <div class="skill-pills-list">
+            ${skills.ai_ml.map(s => `<span class="skill-pill">${s}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Category 2: Programming Languages -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">💻</div>
+            <div class="skill-cat-title">Languages</div>
+          </div>
+          <div class="skill-pills-list">
+            ${skills.languages.map(s => `<span class="skill-pill">${s}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Category 3: Web & Cloud Frameworks -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">⚡</div>
+            <div class="skill-cat-title">Web & Cloud Backend</div>
+          </div>
+          <div class="skill-pills-list">
+            ${skills.web_frameworks.map(s => `<span class="skill-pill">${s}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Category 4: Hardware & DevOps -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🛠️</div>
+            <div class="skill-cat-title">IoT, Hardware & DevOps</div>
+          </div>
+          <div class="skill-pills-list">
+            ${skills.tools_hardware.map(s => `<span class="skill-pill">${s}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  main.appendChild(skillsSection);
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
