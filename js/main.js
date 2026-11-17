@@ -271,6 +271,52 @@ function renderSkills() {
   main.appendChild(skillsSection);
 }
 
+function renderExperience() {
+  const main = document.getElementById('main-content');
+  if (!main || !portfolioData) return;
+
+  const { experience } = portfolioData;
+
+  const expSection = document.createElement('section');
+  expSection.id = 'experience';
+  expSection.className = 'section';
+  expSection.innerHTML = `
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">Career Track</span>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Real-world AI engineering, domain-specific LLM dataset curation, and edge IoT deployment.</p>
+      </div>
+
+      <div class="experience-timeline">
+        ${experience.map(item => `
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-role">${item.role}</div>
+                  <div class="timeline-company">${item.company}</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period-badge">📅 ${item.period}</span>
+                  <span>📍 ${item.location}</span>
+                </div>
+              </div>
+
+              <ul class="timeline-list">
+                ${item.highlights.map(hl => `<li>${hl}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+
+  main.appendChild(expSection);
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
