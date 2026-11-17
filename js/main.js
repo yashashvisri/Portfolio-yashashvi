@@ -317,6 +317,60 @@ function renderExperience() {
   main.appendChild(expSection);
 }
 
+function renderPatentAndResearch() {
+  const main = document.getElementById('main-content');
+  if (!main || !portfolioData) return;
+
+  const prSection = document.createElement('section');
+  prSection.id = 'patent';
+  prSection.className = 'section';
+  prSection.innerHTML = `
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">Intellectual Property & Discovery</span>
+        <h2 class="section-title">Patent & Research Innovations</h2>
+        <p class="section-subtitle">Pioneering applied deep learning solutions with official patent recognition and peer-reviewed scientific contributions.</p>
+      </div>
+
+      <!-- Granted Patent Spotlight Card -->
+      <div class="spotlight-card">
+        <div class="spotlight-header">
+          <span class="patent-granted-badge">
+            <span>🛡️</span> Granted Patent
+          </span>
+          <span class="highlights-tag">Agricultural Tech Innovation</span>
+        </div>
+
+        <h3 class="spotlight-title">Automated Spraying System</h3>
+        <p class="spotlight-desc">
+          An intelligent automated agricultural system designed to optimize pesticide and fertilizer dispensing using real-time crop disease detection. By pairing a DenseNetV2 deep neural network running directly on a Raspberry Pi 4 edge device with precision actuator controls, the system dynamically targets diseased areas rather than blanket spraying.
+        </p>
+
+        <div class="spotlight-metrics-row">
+          <div class="spotlight-metric-item">
+            <span class="spotlight-metric-number">+20%</span>
+            <span class="spotlight-metric-text">Automation Efficiency Gain</span>
+          </div>
+          <div class="spotlight-metric-item">
+            <span class="spotlight-metric-number">92%</span>
+            <span class="spotlight-metric-text">Crop Disease Detection Accuracy</span>
+          </div>
+          <div class="spotlight-metric-item">
+            <span class="spotlight-metric-number">Edge IoT</span>
+            <span class="spotlight-metric-text">Deployed on Raspberry Pi 4</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="research-publication-container">
+        <!-- Research publication card injected in next commit -->
+      </div>
+    </div>
+  `;
+
+  main.appendChild(prSection);
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
