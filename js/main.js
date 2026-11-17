@@ -469,6 +469,104 @@ function renderTerminalSection() {
   initTerminal();
 }
 
+function renderContact() {
+  const main = document.getElementById('main-content');
+  if (!main || !portfolioData) return;
+
+  const { basics } = portfolioData;
+
+  const contactSection = document.createElement('section');
+  contactSection.id = 'contact';
+  contactSection.className = 'section';
+  contactSection.innerHTML = `
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Let's Connect & Collaborate</h2>
+        <p class="section-subtitle">Whether exploring AI/ML engineering roles, research inquiries, or technical projects—my inbox is always open.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">Direct Channels</h3>
+          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6;">
+            Feel free to reach out directly via email, phone, or LinkedIn. I typically respond within 24 hours.
+          </p>
+
+          <div class="contact-channels-list">
+            <a href="mailto:${basics.email}" class="contact-channel-item">
+              <div class="contact-channel-icon">📧</div>
+              <div>
+                <div class="contact-channel-label">Email</div>
+                <div class="contact-channel-val">${basics.email}</div>
+              </div>
+            </a>
+
+            <a href="tel:${basics.phone}" class="contact-channel-item">
+              <div class="contact-channel-icon">📞</div>
+              <div>
+                <div class="contact-channel-label">Phone</div>
+                <div class="contact-channel-val">${basics.phone}</div>
+              </div>
+            </a>
+
+            <a href="${basics.linkedin}" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+              <div class="contact-channel-icon">💼</div>
+              <div>
+                <div class="contact-channel-label">LinkedIn</div>
+                <div class="contact-channel-val">yashashvi-srivastava</div>
+              </div>
+            </a>
+
+            <a href="${basics.github}" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+              <div class="contact-channel-icon">🐙</div>
+              <div>
+                <div class="contact-channel-label">GitHub</div>
+                <div class="contact-channel-val">@yashashvisri</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-box">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">Send a Message</h3>
+          <form id="portfolio-contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Johnson" required>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+              <label for="contact-email" class="form-label">Your Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@example.com" required>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+              <label for="contact-subject" class="form-label">Subject</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="e.g. AI Engineering Opportunity / Collaboration" required>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Hello Yashashvi, I'd like to discuss..." required></textarea>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <span>🚀</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  `;
+
+  main.appendChild(contactSection);
+  initContactForm();
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
