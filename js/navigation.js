@@ -80,3 +80,40 @@ function setupNavInteractions() {
 }
 
 document.addEventListener('DOMContentLoaded', renderHeader);
+
+
+/* Scroll Progress & Scroll to Top Button */
+
+function initScrollHelpers() {
+  const progressBar = document.getElementById('scroll-progress');
+  
+  // Inject scroll-to-top button
+  const scrollBtn = document.createElement('button');
+  scrollBtn.id = 'scroll-to-top';
+  scrollBtn.className = 'scroll-to-top-btn';
+  scrollBtn.setAttribute('aria-label', 'Scroll to top of page');
+  scrollBtn.innerHTML = '↑';
+  document.body.appendChild(scrollBtn);
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+
+    if (progressBar) {
+      progressBar.style.width = `${progress}%`;
+    }
+
+    if (scrollTop > 400) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initScrollHelpers);
