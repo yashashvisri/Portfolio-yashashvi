@@ -92,6 +92,51 @@ function renderHero() {
   main.innerHTML = heroHTML;
 }
 
+function renderHighlights() {
+  const container = document.getElementById('hero-highlights-container');
+  if (!container || !portfolioData) return;
+
+  container.innerHTML = `
+    <div class="hero-highlights-box">
+      <div class="highlights-header">
+        <span class="highlights-title">Key Engineering Credentials</span>
+        <span class="highlights-tag">Verified</span>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value gradient-text">8.67</div>
+          <div class="metric-label">CGPA / 10</div>
+          <div class="metric-sub">Top 10% of class, VIT Bhopal</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">1 Patent</div>
+          <div class="metric-label">Granted Patent</div>
+          <div class="metric-sub">Automated Spraying System</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">Published</div>
+          <div class="metric-label">Deep Learning Paper</div>
+          <div class="metric-sub">DenseNet + ResNet Fusion (3+ Citations)</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">99%</div>
+          <div class="metric-label">Cloud API Uptime</div>
+          <div class="metric-sub">Render &bull; 300+ Daily Requests</div>
+        </div>
+      </div>
+
+      <div class="highlights-footer">
+        <span>📍 Based in India</span>
+        <span class="highlights-tag">Open to Opportunities</span>
+      </div>
+    </div>
+  `;
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
