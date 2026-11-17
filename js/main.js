@@ -567,6 +567,60 @@ function renderContact() {
   initContactForm();
 }
 
+function renderFooter() {
+  const footer = document.getElementById('footer');
+  if (!footer || !portfolioData) return;
+
+  const { basics } = portfolioData;
+
+  footer.innerHTML = `
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <span class="brand-monogram">Y</span>
+            <span>Yashashvi<span class="brand-text-accent">.dev</span></span>
+          </div>
+          <p class="footer-tagline">
+            Architecting intelligent machine learning applications and high-performance full-stack web platforms with a focus on impact and precision.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <div class="footer-links-list">
+            <a href="#about" class="footer-link">About & Academics</a>
+            <a href="#skills" class="footer-link">Skills & Stack</a>
+            <a href="#experience" class="footer-link">Experience</a>
+            <a href="#patent" class="footer-link">Patent & Research</a>
+            <a href="#projects" class="footer-link">Featured Projects</a>
+            <a href="#terminal" class="footer-link">Developer Console</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <div class="footer-links-list">
+            <a href="${basics.linkedin}" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn Profile</a>
+            <a href="${basics.github}" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Repositories</a>
+            <a href="mailto:${basics.email}" class="footer-link">${basics.email}</a>
+            <a href="tel:${basics.phone}" class="footer-link">+91 8303355281</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Yashashvi Srivastava. All rights reserved.</div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <span>Engineered with Vanilla JS & Modular CSS</span>
+          <span>&bull;</span>
+          <a href="#hero" class="footer-link">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
